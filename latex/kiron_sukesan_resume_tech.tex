@@ -1,0 +1,189 @@
+%-------------------------
+% Resume for Kiron Sukesan
+% Targeting: ML / Research / Senior SWE roles
+%-------------------------
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[top=0.55in, bottom=0.55in, left=0.65in, right=0.65in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Colors
+\definecolor{accent}{RGB}{30, 64, 120}
+\definecolor{lightgray}{RGB}{130, 130, 130}
+
+% Hyperlink setup
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+% Section formatting
+\titleformat{\section}
+  {\bfseries\normalsize\color{accent}}
+  {}{0em}{}
+  [\vspace{-4pt}\textcolor{accent}{\rule{\linewidth}{0.8pt}}\vspace{2pt}]
+
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+% No indentation
+\setlength{\parindent}{0pt}
+
+% Compact list style
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=1.5pt,
+  parsep=0pt,
+  topsep=2pt,
+  label=\textbullet
+}
+
+% Custom commands
+\newcommand{\resumeheader}[5]{%
+  \begin{center}
+    {\LARGE\bfseries #1}\\[4pt]
+    {\color{lightgray}\small
+      #2 \,$\cdot$\, #3 \,$\cdot$\, \href{#4}{linkedin.com/in/kironsukesan} \,$\cdot$\, \href{#5}{github.com/kironsuk}
+    }
+  \end{center}
+}
+
+\newcommand{\experienceentry}[4]{%
+  \vspace{4pt}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} \textit{\color{lightgray}at} \textbf{#2} & \textcolor{lightgray}{\small #3} \\
+    \multicolumn{2}{@{}l@{}}{\textit{\color{lightgray}\small #4}}
+  \end{tabularx}
+  \vspace{1pt}
+}
+
+\newcommand{\educationentry}[4]{%
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{lightgray}{\small #3} \\
+    \textit{#2} & \textcolor{lightgray}{\small #4}
+  \end{tabularx}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+%------------------------
+% HEADER
+%------------------------
+\resumeheader
+  {Kiron Sukesan}
+  {kironsuk@gmail.com}
+  {Seattle, WA}
+  {https://linkedin.com/in/kironsukesan}
+  {https://github.com/kironsuk}
+
+\vspace{5pt}
+
+%------------------------
+% SUMMARY
+%------------------------
+\section{Summary}
+Senior software and machine learning engineer with 9+ years of experience and 2 years of management experience. Track record building large-scale production systems at Amazon and ML platforms at Compass. Research background in Bayesian probabilistic modeling.
+
+%------------------------
+% SKILLS
+%------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \textbf{Languages / Tools}      & Java, Python, C++, Rust, JavaScript, MATLAB, Agentic Development \\[2pt]
+  \textbf{ML / AI}        & ANN, HNSW, Computer Vision, Gaussian Processes, Bayesian Inference, Semi-Supervised Learning, Deep Learning, Reinforcement Learning \\[2pt]
+  \textbf{Storage Systems}        & Distributed Database Internals, Consensus Protocols (Paxos, Raft), Database Engine Implementation (LSM tree and B-tree)  \\[2pt]
+\end{tabularx}
+
+%------------------------
+% EXPERIENCE
+%------------------------
+\section{Experience}
+
+\experienceentry{Lead Engineer}{Freelance}{Apr 2024 -- Current}{Remote}
+\begin{itemize}
+  \item Architected and developed AppMan, a full-stack apartment management platform using Angular, PostgreSQL, and Docker, modernizing legacy Oracle APEX workflows for property operations, payments, leasing, taxes, and task management. In production use for 1000+ unit apartment management company.  
+  \item Designed and build a test-driven engineering infrastructure with unit, integration, adversarial, migration, authorization, and smoke test. This foundation allowed the ultize a custom agentic development workflow to accelerate delivery while maintaining human oversight and production-quality standards.
+\end{itemize}
+
+\experienceentry{Software Development Manager}{Amazon Web Services (AWS)}{Aug 2024 -- Apr 2026}{DynamoDB Storage Node, Seattle, WA}
+\begin{itemize}
+  \item Leader in the engineering organization for DynamoDB's Storage Node, one of AWS's highest-scale distributed storage systems, overseeing architecture, delivery, and team health. Specifically responsible for the TTL system, replication protocol, general correctness of DynamoDB Storage, and feature expansion efforts within storage.  
+  \item Responsible for hiring, mentoring, and performance management for a team of 10+ junior, mid-level and senior software engineers; established engineering standards and oncall culture.
+\end{itemize}
+
+\experienceentry{Senior Software Engineer}{Amazon Web Services (AWS)}{Jan 2023 -- Aug 2024}{DynamoDB Storage Node API Team, Seattle, WA}
+\begin{itemize}
+  \item Designed and implemented features for the DynamoDB Storage Node API layer, contributing to a system serving millions of customers with stringent latency, availability, and durability requirements.
+  \item Led oncall and operational excellence initiatives, driving root cause analyses and systemic improvements to reduce customer-impacting events across the storage tier.
+\end{itemize}
+
+\experienceentry{Machine Learning Engineer II / Senior Machine Learning Engineer}{Compass}{Dec 2019 -- Nov 2022}{Seattle, WA}
+\begin{itemize}
+  \item Built and owned Computer Vision based ML models used by agents across the platform, directly influencing transaction outcomes.
+  \item Architected end-to-end ML pipelines spanning data ingestion, feature engineering, model training, evaluation, and production deployment on cloud infrastructure.
+  \item Mentored junior ML engineers and drove platform improvements that reduced model iteration cycle time and increased experiment throughput.
+\end{itemize}
+
+\experienceentry{Software Development Engineer I/II}{Amazon Kindle}{Oct 2017 -- Nov 2019}{Greater Seattle Area}
+\begin{itemize}
+  \item Designed and shipped features for Amazon Kindle's internal data processing pipeline, collaborating with senior engineers on distributed systems design, API contracts, and service reliability.
+  \item Participated in oncall rotations and drove root cause analyses for production incidents, contributing to improved monitoring and alerting infrastructure.
+  \item Promoted to SDE II after demonstrating technical ability with end to end solution for Kindle compliance with GDPR's requirement to return data to customers on request.
+\end{itemize}
+
+\experienceentry{Data Scientist / Research Engineer}{Washington University in St.\ Louis}{May 2016 -- Aug 2017}{Laboratory of Sensory Neuroscience and Neuroengineering, St. Louis, MO}
+\begin{itemize}
+  \item Developed a Bayesian active learning framework using Gaussian Process Classification to efficiently estimate audiometric threshold surfaces, reducing clinical measurement burden while preserving diagnostic accuracy.
+  \item Designed a novel ML-based hardware calibration algorithm for audiometric equipment, improving signal fidelity and measurement consistency across experimental sessions.
+  \item Co-authored three peer-reviewed publications on Bayesian active learning, psychometric field estimation, and online machine-learning audiometry.
+\end{itemize}
+
+\experienceentry{Software Developer}{Purnatva Solutions Pvt.\ Ltd.}{Sep 2014 -- Aug 2015}{Bengaluru, India}
+\begin{itemize}
+  \item Implemented real-time GPS bus tracking module for the Falcon Mobile App, supporting large-scale deployment with 10,000+ active users across the platform.
+  \item Contributed to \textit{vidyadhan.org}, a LAMP-stack scholarship portal connecting sponsors to underprivileged students, working directly with the product team on feature delivery and backend development.
+\end{itemize}
+
+\experienceentry{Biomedical Engineer, Undergraduate Research}{Wash.\ U.\ in St.\ Louis}{Aug 2013 -- May 2014}{Department of Biomedical Engineering}
+\begin{itemize}
+  \item Designed and built a wearable EEG recording device for overnight clinical use, using custom analog circuitry, embedded software, and mechanical design in close collaboration with two biomedical engineering peers and clinical partners.
+  \item Validated device performance against clinical EEG standards and iterated on hardware and firmware based on clinician feedback.
+\end{itemize}
+
+\experienceentry{Neurosurgery Research Intern}{University of Washington}{Jun 2013 -- Aug 2013}{Brain-Computer Interface Lab (Dr.\ Jeff Ojemann), Seattle, WA}
+\begin{itemize}
+  \item Developed a signal analysis algorithm for electrocorticographic (ECoG) neural signals; diagnosed and resolved electromagnetic noise artifacts that had been corrupting recorded data.
+  \item Constructed a closed-loop BCI device that enabled motor-impaired patient hand movement through real-time classification of theta wave activity from ECoG recordings.
+\end{itemize}
+
+%------------------------
+% EDUCATION
+%------------------------
+\vspace{8pt}
+\section{Education}
+
+\educationentry{Washington University in St.\ Louis}{Master of Science, Computer Science}{2015 -- 2016}{St. Louis, MO}
+\vspace{6pt}
+\educationentry{Washington University in St.\ Louis}{Bachelor of Science, Biomedical Engineering}{2010 -- 2014}{St. Louis, MO}
+
+%------------------------
+% PUBLICATIONS
+%------------------------
+\section{Publications}
+\begin{itemize}
+  \item Song, X. D., \textbf{Sukesan, K. A.}, \& Barbour, D. L. ``Bayesian active probabilistic classification for psychometric field estimation.'' \textit{Attention, Perception, \& Psychophysics}, 80 (2018), 798--812. DOI: \href{https://doi.org/10.3758/s13414-017-1460-0}{10.3758/s13414-017-1460-0}.
+  \item Barbour, D. L., DiLorenzo, J. C., \textbf{Sukesan, K. A.}, Song, X. D., Chen, J. Y., Degen, E. A., Heisey, K. L., \& Garnett, R. ``Conjoint psychometric field estimation for bilateral audiometry.'' \textit{Behavior Research Methods}, 51 (2019), 1271--1285. DOI: \href{https://doi.org/10.3758/s13428-018-1062-3}{10.3758/s13428-018-1062-3}.
+  \item Barbour, D. L., Howard, R. T., Song, X. D., Metzger, N., \textbf{Sukesan, K. A.}, et al. ``Online machine learning audiometry.'' \textit{Ear and Hearing}, 40(4) (2019), 918--926. DOI: \href{https://doi.org/10.1097/AUD.0000000000000669}{10.1097/AUD.0000000000000669}.
+\end{itemize}
+
+\end{document}
